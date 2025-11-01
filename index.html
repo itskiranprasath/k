@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kiran Prasath | Engineer & Security Researcher</title>
+  <title>Kiran Prasath | Engineer & Security Researcher | Sports Athlete | Traveler</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a2d9d6a89f.js" crossorigin="anonymous"></script>
+
+  <meta name="description" content="Kiran Prasath - Engineer, Security Researcher, Sports Athlete, and Traveler. Passionate about cybersecurity, AI, and system optimization.">
+  <meta property="og:title" content="Kiran Prasath | Engineer & Security Researcher">
+  <meta property="og:description" content="Exploring systems, breaking them apart, and rebuilding them stronger & more secure.">
+  <meta property="og:image" content="images/k.jpg">
+  <meta property="og:type" content="website">
+
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
@@ -16,7 +24,6 @@
       background: #000;
     }
 
-    /* Dynamic gradient background */
     body::before {
       content: "";
       position: fixed;
@@ -32,7 +39,6 @@
       100% {background-position: 0% 50%;}
     }
 
-    /* Overlay to darken background slightly */
     body::after {
       content: "";
       position: fixed;
@@ -41,7 +47,6 @@
       z-index: -1;
     }
 
-    /* Sections */
     section {
       min-height: 100vh;
       display: flex;
@@ -60,40 +65,39 @@
     }
 
     h1.section-title {
-      font-size: 2.8rem;
-      color: #00ffd5;
+      font-size: 2.5rem;
+      color: #888;
       margin-bottom: 1rem;
-      letter-spacing: 1px;
+      transition: all 0.6s ease;
     }
+    h1.section-title.active-title {
+      color: #00ffd5;
+      text-shadow: 0 0 20px #00ffd5, 0 0 40px #00ffd5;
+      transform: scale(1.1);
+    }
+
     p {
       max-width: 800px;
       line-height: 1.7;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ddd;
     }
 
-    /* Hero Section */
-    #home {
-      flex-direction: column;
-    }
+    #home { flex-direction: column; margin-top: 60px; }
     .hero-content img {
-      width: 250px; height: 250px;
+      width: 200px; height: 200px;
       border-radius: 50%;
-      border: 8px solid #00ffd5;
+      border: 6px solid #00ffd5;
       object-fit: cover;
       animation: photoPulse 3s infinite ease-in-out;
       transition: transform 0.5s ease;
     }
-    .hero-content img:hover {
-      transform: scale(1.05);
-    }
+    .hero-content img:hover { transform: scale(1.05); }
     @keyframes photoPulse {
       0%,100% { box-shadow: 0 0 0 0 rgba(0,255,213,0.6); }
       50% { box-shadow: 0 0 40px 10px rgba(0,255,213,0); }
     }
-    .hero-content h1 {
-      font-size: 3rem; margin-top: 1rem;
-    }
+    .hero-content h1 { font-size: 2.5rem; margin-top: 1rem; }
     .hero-content h1 .wave {
       display: inline-block;
       animation: wave 2s infinite;
@@ -108,10 +112,9 @@
       margin: 0.8rem 0;
       font-weight: 400;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
-    /* Education & Experience Cards */
     .card {
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
@@ -120,7 +123,7 @@
       padding: 1.5rem 2rem;
       margin: 1rem 0;
       max-width: 600px;
-      width: 80%;
+      width: 90%;
       color: #fff;
       transition: transform 0.5s ease, background 0.5s ease;
     }
@@ -129,21 +132,114 @@
       background: rgba(0,255,213,0.15);
     }
 
-    /* Contact icons */
+    /* Education Logos */
+    .edu-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      vertical-align: middle;
+      box-shadow: 0 0 10px rgba(0,255,213,0.5);
+      transition: transform 0.3s ease;
+    }
+    .edu-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,213,0.7);
+    }
+
+    /* Certification Badges */
+    .cert-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    .cert-badges img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.05);
+      padding: 6px;
+      animation: glowPulse 3s infinite ease-in-out;
+    }
+
+    .cert-badges img.cisco {
+      animation: ciscoGlow 3s infinite ease-in-out;
+    }
+    .cert-badges img.eccouncil {
+      animation: eccouncilGlow 3s infinite ease-in-out;
+    }
+
+    @keyframes ciscoGlow {
+      0%,100% { box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff; }
+      50% { box-shadow: 0 0 25px #00ffd5, 0 0 50px #00ffd5; }
+    }
+    @keyframes eccouncilGlow {
+      0%,100% { box-shadow: 0 0 10px #ff1e1e, 0 0 20px #ff1e1e; }
+      50% { box-shadow: 0 0 25px #ff5c5c, 0 0 50px #ff5c5c; }
+    }
+
     .contact-socials {
       margin-top: 2rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
     }
+
     .contact-socials a {
-      font-size: 2rem;
-      color: #00ffd5;
-      transition: 0.3s;
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.4s ease;
     }
+
+    .contact-socials a img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-socials a::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(25deg) translateX(-100%);
+      transition: all 0.7s ease;
+      opacity: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
     .contact-socials a:hover {
-      color: #ff7b00;
-      transform: scale(1.3);
+      transform: scale(1.1);
+    }
+
+    .contact-socials a:hover::after {
+      opacity: 1;
+      animation: shineSweep 0.9s ease-in-out;
+    }
+
+    @keyframes shineSweep {
+      0% { transform: rotate(25deg) translateX(-120%); }
+      50% { transform: rotate(25deg) translateX(0%); opacity: 1; }
+      100% { transform: rotate(25deg) translateX(120%); opacity: 0; }
     }
 
     footer {
@@ -154,18 +250,18 @@
     }
   </style>
 </head>
+
 <body>
-  <!-- HOME -->
+
   <section id="home" class="visible">
     <div class="hero-content">
-      <img src="images/yourphoto.jpg" alt="Kiran Prasath" loading="lazy">
+      <img src="images/k.jpg" alt="Kiran Prasath" loading="lazy">
       <h1>Hi <span class="wave">👋</span>, I'm <span style="color:#00ffd5;">Kiran Prasath</span></h1>
-      <h3>Engineer | Security Researcher</h3>
+      <h3>Engineer | Security Researcher | Sports Athlete | Traveler</h3>
       <p>I explore systems, break them apart, and rebuild them stronger & more secure. <br>Scroll down 👇</p>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <h1 class="section-title">About Me</h1>
     <p>Hi, I’m <strong>Kiran Prasath</strong> — a passionate technologist with a deep interest in computer systems and cybersecurity. 
@@ -173,15 +269,28 @@
     <br><br>Beyond tech, I’m also an algorithmic forex trader, sports enthusiast, and avid traveler who enjoys discovering new perspectives both on and off the field.</p>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education">
-    <h1 class="section-title">Education</h1>
-    <div class="card">🎓 Sri Ambal Public School</div>
-    <div class="card">💻 Dayananda Sagar Institute of Technology</div>
-    <div class="card">🔐 Networkers Home - Cisco CCNA, CCNP, EC-Council CEH, ECSA</div>
+    <h1 class="section-title">Education & Certifications</h1>
+
+    <div class="card">
+      <p><img src="images/school.png" alt="School Logo" class="edu-logo"> Sri Ambal Public School</p>
+    </div>
+
+    <div class="card">
+      <p><img src="images/college.png" alt="College Logo" class="edu-logo"> Dayananda Sagar Institute of Technology</p>
+    </div>
+
+    <div class="card">
+      <p><strong>Certifications</strong></p>
+      <div class="cert-badges">
+        <img src="images/cisco1.png" alt="Cisco Badge 1" class="cisco">
+        <img src="images/cisco2.png" alt="Cisco Badge 2" class="cisco">
+        <img src="images/eccouncil1.png" alt="EC-Council Badge 1" class="eccouncil">
+        <img src="images/eccouncil2.png" alt="EC-Council Badge 2" class="eccouncil">
+      </div>
+    </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
     <h1 class="section-title">Experience</h1>
     <div class="card">
@@ -190,28 +299,32 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h1 class="section-title">Contact</h1>
     <p>Let’s connect and create something impactful together!</p>
     <div class="contact-socials">
-      <a href="https://twitter.com/itskiranprasath" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/itskiranprasath" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://instagram.com/itskiranprasath" target="_blank"><img src="images/insta.jpg" alt="Instagram"></a>
+      <a href="https://x.com/itskiranprasath" target="_blank"><img src="images/x.jpg" alt="Twitter / X"></a>
+      <a href="https://github.com/itskiranprasath" target="_blank"><img src="images/git.jpg" alt="GitHub"></a>
     </div>
   </section>
 
-  <footer>
-    © 2025 Kiran Prasath | Made with ❤️
-  </footer>
+  <footer>© 2025 Kiran Prasath | Made with ❤️</footer>
 
-  <script>
-    // Lazy section animation on scroll
+  <script defer>
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        const title = entry.target.querySelector('.section-title');
+        if (!title) return;
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          title.classList.add('active-title');
+        } else {
+          title.classList.remove('active-title');
+        }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.4 });
     sections.forEach(section => observer.observe(section));
   </script>
 </body>
