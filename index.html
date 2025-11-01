@@ -1,39 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Your Name</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiran Prasath | Engineer & Security Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2d9d6a89f.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; color: #222; background: #fff; }
+    
+    /* Navbar */
+    header {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem;
+    }
+    .logo { font-size: 1.8rem; font-weight: 700; color: #ff5e57; }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links a {
+      text-decoration: none; color: #333; font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: #ff5e57; transform: scale(1.1); }
+
+    /* Sections */
+    section {
+      min-height: 100vh; padding: 100px 20px 50px;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+    }
+    section:nth-child(odd) { background: #fff4f4; }
+    section:nth-child(even) { background: #fefefe; }
+
+    h1.section-title {
+      font-size: 2.5rem; color: #ff5e57; margin-bottom: 1rem;
+    }
+    p { max-width: 800px; line-height: 1.6; font-size: 1.1rem; color: #444; }
+
+    /* Hero Section */
+    #home {
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      animation: gradientShift 10s ease infinite alternate;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .hero-content img {
+      width: 150px; height: 150px;
+      border-radius: 50%; margin-bottom: 1rem;
+      border: 5px solid #ff5e57;
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(255,94,87,0.6); }
+      50% { box-shadow: 0 0 0 15px rgba(255,94,87,0); }
+    }
+    .hero-content h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+    .hero-content h1 .wave { animation: wave 2s infinite; transform-origin: 70% 70%; display: inline-block; }
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0deg); }
+      10%, 30%, 50%, 70%, 90% { transform: rotate(15deg); }
+      20%, 40%, 80% { transform: rotate(-10deg); }
+    }
+    .hero-content h3 { font-weight: 500; margin-bottom: 1rem; color: #333; }
+    .btn {
+      display: inline-block; margin-top: 1rem;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      color: #fff; padding: 0.8rem 2rem; border-radius: 30px;
+      text-decoration: none; font-weight: 600; transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .btn:hover { transform: scale(1.1); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+
+    /* Cards for Education/Experience */
+    .card {
+      background: rgba(255,255,255,0.9);
+      padding: 1.5rem 2rem; border-radius: 15px; margin: 1rem 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      width: 80%; max-width: 600px;
+    }
+    .card img { width: 40px; vertical-align: middle; margin-right: 10px; }
+
+    /* Contact */
+    .contact-socials {
+      margin-top: 2rem;
+      display: flex; justify-content: center; gap: 2rem;
+    }
+    .contact-socials a {
+      font-size: 2rem; color: #333; transition: 0.3s;
+    }
+    .contact-socials a:hover { color: #ff5e57; transform: scale(1.2); }
+
+    footer {
+      text-align: center; padding: 1rem;
+      background: rgba(255,255,255,0.8);
+      font-size: 0.9rem; color: #444;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">YourName</div>
+      <div class="logo">KiranPrasath</div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content fade-in">
-      <h1>Hello, I'm <span>Your Name</span></h1>
-      <h3>A Passionate <span class="highlight">Web Developer</span></h3>
-      <p>I create modern, colorful, and interactive websites with clean designs.</p>
-      <a href="about.html" class="btn">Explore More</a>
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-content">
+      <img src="images/yourphoto.jpg" alt="Kiran Prasath">
+      <h1>Hi <span class="wave">👋</span>, I'm Kiran Prasath</h1>
+      <h3>Engineer | Security Researcher</h3>
+      <p>I explore systems, break them apart, and rebuild them stronger & more secure.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h1 class="section-title">About Me</h1>
+    <p>Hi, I’m <strong>Kiran Prasath</strong> — a passionate technologist with a deep interest in computer systems and cybersecurity. I love exploring how systems work, breaking them apart, and building them back stronger and more secure.<br><br>
+    Beyond tech, I’m also an algorithmic forex trader, sports enthusiast, and avid traveler who enjoys discovering new perspectives both on and off the field.</p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h1 class="section-title">Education</h1>
+    <div class="card"><img src="images/school-logo.png" alt=""> Sri Ambal Public School</div>
+    <div class="card"><img src="images/college-logo.png" alt=""> Dayananda Sagar Institute of Technology</div>
+    <div class="card"><img src="images/networkers-logo.png" alt=""> Networkers Home - Cisco CCNA, CCNP, EC-Council CEH, ECSA</div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h1 class="section-title">Experience</h1>
+    <div class="card">
+      <p>Security Research, Algorithmic Trading, and Web Engineering. Currently focused on penetration testing, network defense, and AI-based system hardening.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h1 class="section-title">Contact</h1>
+    <p>Let’s connect and create something impactful together!</p>
+    <div class="contact-socials">
+      <a href="https://twitter.com/itskiranprasath" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/itskiranprasath" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Your Name | Made with ❤️</p>
+    © 2025 Kiran Prasath | Made with ❤️
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
