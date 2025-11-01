@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kiran Prasath | Engineer & Security Researcher | Sports Athlete | Traveller</title>
+  <title>Kiran Prasath | Engineer & Security Researcher | Sports Athlete | Traveler</title>
 
-  <!-- Fonts -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d6a89f.js" crossorigin="anonymous"></script>
 
+  <!-- SEO & Social -->
   <meta name="description" content="Kiran Prasath - Engineer, Security Researcher, Sports Athlete, and Traveler. Passionate about cybersecurity, AI, and system optimization.">
   <meta property="og:title" content="Kiran Prasath | Engineer & Security Researcher">
   <meta property="og:description" content="Exploring systems, breaking them apart, and rebuilding them stronger & more secure.">
@@ -24,6 +26,7 @@
       background: #000;
     }
 
+    /* Dynamic gradient background */
     body::before {
       content: "";
       position: fixed;
@@ -39,6 +42,7 @@
       100% {background-position: 0% 50%;}
     }
 
+    /* Overlay */
     body::after {
       content: "";
       position: fixed;
@@ -47,43 +51,46 @@
       z-index: -1;
     }
 
+    /* Sections */
     section {
-      min-height: 100vh;
+      min-height: 85vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px;
       opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease;
+      transform: translateY(40px);
+      transition: all 0.9s ease;
     }
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
+    /* Section titles */
     h1.section-title {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #888;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       transition: all 0.6s ease;
     }
     h1.section-title.active-title {
       color: #00ffd5;
       text-shadow: 0 0 20px #00ffd5, 0 0 40px #00ffd5;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     p {
       max-width: 800px;
-      line-height: 1.7;
-      font-size: 1.1rem;
+      line-height: 1.6;
+      font-size: 1.05rem;
       color: #ddd;
     }
 
-    #home { flex-direction: column; margin-top: 60px; }
+    /* Hero Section */
+    #home { flex-direction: column; min-height: 100vh; }
     .hero-content img {
       width: 200px; height: 200px;
       border-radius: 50%;
@@ -97,7 +104,7 @@
       0%,100% { box-shadow: 0 0 0 0 rgba(0,255,213,0.6); }
       50% { box-shadow: 0 0 40px 10px rgba(0,255,213,0); }
     }
-    .hero-content h1 { font-size: 2.5rem; margin-top: 1rem; }
+    .hero-content h1 { font-size: 2.4rem; margin-top: 1rem; }
     .hero-content h1 .wave {
       display: inline-block;
       animation: wave 2s infinite;
@@ -109,142 +116,65 @@
       20%, 40%, 80% { transform: rotate(-10deg); }
     }
     .hero-content h3 {
-      margin: 0.8rem 0;
+      margin: 0.6rem 0;
       font-weight: 400;
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
     }
 
+    /* Cards */
     .card {
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 1.5rem 2rem;
-      margin: 1rem 0;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 0.7rem 0;
       max-width: 600px;
       width: 90%;
       color: #fff;
       transition: transform 0.5s ease, background 0.5s ease;
     }
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       background: rgba(0,255,213,0.15);
     }
 
-    /* Education Logos */
-    .edu-logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 10px;
-      vertical-align: middle;
-      box-shadow: 0 0 10px rgba(0,255,213,0.5);
-      transition: transform 0.3s ease;
-    }
-    .edu-logo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,255,213,0.7);
-    }
-
-    /* Certification Badges */
-    .cert-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: 1.2rem;
-    }
-
-    .cert-badges img {
-      width: 70px;
-      height: 70px;
-      border-radius: 12px;
-      object-fit: contain;
-      background: rgba(255,255,255,0.05);
-      padding: 6px;
-      animation: glowPulse 3s infinite ease-in-out;
-    }
-
-    .cert-badges img.cisco {
-      animation: ciscoGlow 3s infinite ease-in-out;
-    }
-    .cert-badges img.eccouncil {
-      animation: eccouncilGlow 3s infinite ease-in-out;
-    }
-
-    @keyframes ciscoGlow {
-      0%,100% { box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff; }
-      50% { box-shadow: 0 0 25px #00ffd5, 0 0 50px #00ffd5; }
-    }
-    @keyframes eccouncilGlow {
-      0%,100% { box-shadow: 0 0 10px #ff1e1e, 0 0 20px #ff1e1e; }
-      50% { box-shadow: 0 0 25px #ff5c5c, 0 0 50px #ff5c5c; }
-    }
-
+    /* Contact Icons */
     .contact-socials {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
-
     .contact-socials a {
+      position: relative;
       display: inline-block;
-      position: relative;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      transition: transform 0.4s ease;
     }
-
-    .contact-socials a img {
-      width: 100%;
-      height: 100%;
+    .contact-socials img {
+      width: 45px; height: 45px;
       border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      transition: all 0.4s ease;
-      position: relative;
-      z-index: 1;
+      transition: transform 0.4s ease, filter 0.4s ease;
     }
-
-    .contact-socials a::after {
-      content: "";
+    .contact-socials img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.8);
+    }
+    .contact-socials img:hover::after {
+      content: "✨";
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
-      transform: rotate(25deg) translateX(-100%);
-      transition: all 0.7s ease;
-      opacity: 0;
-      pointer-events: none;
-      border-radius: 50%;
-      z-index: 2;
+      top: -10px; right: -10px;
+      animation: sparkle 1s ease;
     }
-
-    .contact-socials a:hover {
-      transform: scale(1.1);
-    }
-
-    .contact-socials a:hover::after {
-      opacity: 1;
-      animation: shineSweep 0.9s ease-in-out;
-    }
-
-    @keyframes shineSweep {
-      0% { transform: rotate(25deg) translateX(-120%); }
-      50% { transform: rotate(25deg) translateX(0%); opacity: 1; }
-      100% { transform: rotate(25deg) translateX(120%); opacity: 0; }
+    @keyframes sparkle {
+      0% {opacity: 0; transform: scale(0.5);}
+      50% {opacity: 1; transform: scale(1.3);}
+      100% {opacity: 0; transform: scale(0);}
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 0.8rem;
       color: #aaa;
       font-size: 0.9rem;
     }
@@ -253,44 +183,36 @@
 
 <body>
 
+  <!-- HOME -->
   <section id="home" class="visible">
     <div class="hero-content">
       <img src="images/k.jpg" alt="Kiran Prasath" loading="lazy">
       <h1>Hi <span class="wave">👋</span>, I'm <span style="color:#00ffd5;">Kiran Prasath</span></h1>
-      <h3>Engineer | Security Researcher | Sports Athlete | Traveller</h3>
+      <h3>Engineer | Security Researcher | Sports Athlete | Traveler</h3>
       <p>I explore systems, break them apart, and rebuild them stronger & more secure. <br>Scroll down 👇</p>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <h1 class="section-title">About Me</h1>
     <p>Hi, I’m <strong>Kiran Prasath</strong> — a passionate technologist with a deep interest in computer systems and cybersecurity. 
     I love exploring how systems work, breaking them apart, and building them back stronger and more secure. 
-    <br><br>Beyond tech, I’m also an algorithmic forex trader, sports enthusiast, and avid traveller who enjoys discovering new perspectives both on and off the field.</p>
+    <br><br>Beyond tech, I’m also an algorithmic forex trader, sports enthusiast, and avid traveler who enjoys discovering new perspectives both on and off the field.</p>
   </section>
 
+  <!-- EDUCATION -->
   <section id="education">
-    <h1 class="section-title">Education & Certifications</h1>
-
+    <h1 class="section-title">Education</h1>
+    <div class="card"><img src="images/school.png" alt="School" style="height:40px; vertical-align:middle; margin-right:10px;">🎓 Sri Ambal Public School</div>
+    <div class="card"><img src="images/college.png" alt="College" style="height:40px; vertical-align:middle; margin-right:10px;">💻 Dayananda Sagar Institute of Technology</div>
     <div class="card">
-      <p><img src="images/school.png" alt="School Logo" class="edu-logo"> Sri Ambal Public School</p>
-    </div>
-
-    <div class="card">
-      <p><img src="images/college.png" alt="College Logo" class="edu-logo"> Dayananda Sagar Institute of Technology</p>
-    </div>
-
-    <div class="card">
-      <p><strong>Certifications</strong></p>
-      <div class="cert-badges">
-        <img src="images/cisco1.png" alt="Cisco Badge 1" class="cisco">
-        <img src="images/cisco2.png" alt="Cisco Badge 2" class="cisco">
-        <img src="images/eccouncil1.png" alt="EC-Council Badge 1" class="eccouncil">
-        <img src="images/eccouncil2.png" alt="EC-Council Badge 2" class="eccouncil">
-      </div>
+      <p><img src="images/cisco1.png" alt="Cisco" style="height:45px; margin:5px;"> <img src="images/cisco2.png" alt="Cisco Badge" style="height:45px; margin:5px;"> 
+      <img src="images/eccouncil1.png" alt="EC-Council" style="height:45px; margin:5px;"> <img src="images/eccouncil2.png" alt="EC-Council Badge" style="height:45px; margin:5px;"></p>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
     <h1 class="section-title">Experience</h1>
     <div class="card">
@@ -299,6 +221,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h1 class="section-title">Contact</h1>
     <p>Let’s connect and create something impactful together!</p>
@@ -309,9 +232,12 @@
     </div>
   </section>
 
-  <footer>© 2025 Kiran Prasath | Made with ❤️</footer>
+  <footer>
+    © 2025 Kiran Prasath | Made with ❤️
+  </footer>
 
   <script defer>
+    // Intersection Observer for section reveal & title highlight
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
