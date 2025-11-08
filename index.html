@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiran Prasath | Engineer & Security Researcher | Sports Athlete | Traveller</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
   <meta name="description" content="Kiran Prasath - Engineer, Security Researcher, Sports Athlete, and Traveller. Passionate about cybersecurity, AI, and system optimization.">
@@ -132,14 +131,9 @@
       background: rgba(0,255,213,0.15);
     }
 
-    /* Education Logos */
     .edu-logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 10px;
-      vertical-align: middle;
+      width: 50px; height: 50px; border-radius: 50%;
+      object-fit: cover; margin-right: 10px; vertical-align: middle;
       box-shadow: 0 0 10px rgba(0,255,213,0.5);
       transition: transform 0.3s ease;
     }
@@ -148,105 +142,153 @@
       box-shadow: 0 0 20px rgba(0,255,213,0.7);
     }
 
-    /* Certification Badges */
     .cert-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: 1.2rem;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.2rem; margin-top: 1.2rem;
     }
-
     .cert-badges img {
-      width: 70px;
-      height: 70px;
-      border-radius: 12px;
-      object-fit: contain;
-      background: rgba(255,255,255,0.05);
+      width: 70px; height: 70px; border-radius: 12px;
+      object-fit: contain; background: rgba(255,255,255,0.05);
       padding: 6px;
-      animation: glowPulse 3s infinite ease-in-out;
-    }
-
-    .cert-badges img.cisco {
-      animation: ciscoGlow 3s infinite ease-in-out;
-    }
-    .cert-badges img.eccouncil {
-      animation: eccouncilGlow 3s infinite ease-in-out;
-    }
-
-    @keyframes ciscoGlow {
-      0%,100% { box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff; }
-      50% { box-shadow: 0 0 25px #00ffd5, 0 0 50px #00ffd5; }
-    }
-    @keyframes eccouncilGlow {
-      0%,100% { box-shadow: 0 0 10px #ff1e1e, 0 0 20px #ff1e1e; }
-      50% { box-shadow: 0 0 25px #ff5c5c, 0 0 50px #ff5c5c; }
     }
 
     .contact-socials {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+      margin-top: 2rem; display: flex; justify-content: center; gap: 2rem;
     }
-
     .contact-socials a {
-      display: inline-block;
-      position: relative;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      transition: transform 0.4s ease;
+      display: inline-block; position: relative;
+      width: 60px; height: 60px; border-radius: 50%;
+      overflow: hidden; transition: transform 0.4s ease;
     }
-
     .contact-socials a img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      transition: all 0.4s ease;
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: all 0.4s ease; position: relative; z-index: 1;
+    }
+    .contact-socials a:hover { transform: scale(1.1); }
+
+    footer { text-align: center; padding: 1rem; color: #aaa; font-size: 0.9rem; }
+
+    /* ===== Experience Timeline ===== */
+    .timeline {
       position: relative;
-      z-index: 1;
+      max-width: 800px;
+      margin: 80px auto 40px;
+      padding: 20px 0;
     }
 
-    .contact-socials a::after {
+    .timeline::before {
       content: "";
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
-      transform: rotate(25deg) translateX(-100%);
-      transition: all 0.7s ease;
-      opacity: 0;
-      pointer-events: none;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(0deg,#ff0057,#ff7b00,#00ffd5,#0099ff,#ff0057);
+      background-size: 100% 300%;
+      animation: flowUp 7s linear infinite reverse;
+      box-shadow: 0 0 15px rgba(0,255,213,0.5);
+    }
+
+    @keyframes flowUp {
+      0% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 40px 0;
+    }
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+      padding-right: 80px;
+    }
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+      padding-left: 80px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 55px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      z-index: 2;
+      background: #000;
+      border: 3px solid #00ffd5;
+      z-index: 3;
+    }
+    .timeline-item.left::before { right: -11px; }
+    .timeline-item.right::before { left: -11px; }
+
+    .logo {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      border: 3px solid #00ffd5;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,255,213,0.5);
+      transition: transform 0.3s ease;
+    }
+    .logo img {
+      width: 70%; height: 70%; object-fit: contain;
+    }
+    .logo:hover { transform: scale(1.08); }
+
+    /* latest company - bright blinking star */
+    .timeline-item.latest .logo {
+      border: none;
+      background: radial-gradient(circle,#fff 40%,#ffe6a8 100%);
+      animation: starBlink 1.2s infinite ease-in-out;
+      box-shadow:
+        0 0 30px rgba(255,200,0,1),
+        0 0 80px rgba(255,150,0,0.9),
+        0 0 120px rgba(255,100,0,0.8);
+    }
+    @keyframes starBlink {
+      0%,100% {
+        transform: scale(1.1);
+        box-shadow:
+          0 0 35px rgba(255,200,0,1),
+          0 0 80px rgba(255,150,0,0.9),
+          0 0 120px rgba(255,100,0,0.8);
+      }
+      50% {
+        transform: scale(1);
+        box-shadow:
+          0 0 10px rgba(255,200,0,0.5),
+          0 0 20px rgba(255,150,0,0.3),
+          0 0 30px rgba(255,100,0,0.2);
+      }
     }
 
-    .contact-socials a:hover {
-      transform: scale(1.1);
+    .timeline-item h3 {
+      margin: 10px 0 4px;
+      font-size: 1.3rem;
+      color: #00ffd5;
+    }
+    .timeline-item p {
+      margin: 0;
+      color: #ccc;
+      font-size: 1rem;
     }
 
-    .contact-socials a:hover::after {
-      opacity: 1;
-      animation: shineSweep 0.9s ease-in-out;
-    }
-
-    @keyframes shineSweep {
-      0% { transform: rotate(25deg) translateX(-120%); }
-      50% { transform: rotate(25deg) translateX(0%); opacity: 1; }
-      100% { transform: rotate(25deg) translateX(120%); opacity: 0; }
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #aaa;
-      font-size: 0.9rem;
+    @media(max-width:720px){
+      .timeline::before { left: 20px; }
+      .timeline-item,
+      .timeline-item.left,
+      .timeline-item.right {
+        width: 100%; text-align: left;
+        padding: 30px 0 30px 60px;
+      }
+      .timeline-item::before { left: 13px; }
     }
   </style>
 </head>
@@ -270,32 +312,174 @@
   </section>
 
   <section id="education">
-    <h1 class="section-title">Education & Certifications</h1>
+  <h1 class="section-title">Education & Certifications</h1>
 
-    <div class="card">
-      <p><img src="images/school.png" alt="School Logo" class="edu-logo"> Sri Ambal Public School</p>
+  <div class="card">
+    <p>
+      <img src="images/school.png" alt="School Logo" class="edu-logo">
+      Sri Ambal Public School
+    </p>
+  </div>
+
+  <div class="card">
+    <p>
+      <img src="images/college.png" alt="College Logo" class="edu-logo">
+      Dayananda Sagar Institute of Technology
+    </p>
+  </div>
+
+  <div class="card">
+    <p><strong>Certifications</strong></p>
+    <div class="cert-badges">
+      <img src="images/cisco1.png" alt="Cisco Badge 1" class="cisco">
+      <img src="images/cisco2.png" alt="Cisco Badge 2" class="cisco">
+      <img src="images/eccouncil1.png" alt="EC-Council Badge 1" class="eccouncil">
+      <img src="images/eccouncil2.png" alt="EC-Council Badge 2" class="eccouncil">
     </div>
+  </div>
+</section>
 
-    <div class="card">
-      <p><img src="images/college.png" alt="College Logo" class="edu-logo"> Dayananda Sagar Institute of Technology</p>
-    </div>
+<style>
+/* === Education Section Styling === */
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    <div class="card">
-      <p><strong>Certifications</strong></p>
-      <div class="cert-badges">
-        <img src="images/cisco1.png" alt="Cisco Badge 1" class="cisco">
-        <img src="images/cisco2.png" alt="Cisco Badge 2" class="cisco">
-        <img src="images/eccouncil1.png" alt="EC-Council Badge 1" class="eccouncil">
-        <img src="images/eccouncil2.png" alt="EC-Council Badge 2" class="eccouncil">
-      </div>
-    </div>
-  </section>
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  max-width: 600px;
+  width: 90%;
+  color: #fff;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 255, 213, 0.15);
+}
 
+/* School and College Logos */
+.edu-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.5);
+  transition: transform 0.3s ease;
+}
+.edu-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.7);
+}
+
+/* Certification Badges Grid */
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+/* Common Badge Styling */
+.cert-badges img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+.cert-badges img:hover {
+  transform: scale(1.15);
+}
+
+/* Cisco – Sky Blue Glow */
+.cert-badges img.cisco {
+  animation: ciscoGlow 2.5s infinite ease-in-out;
+}
+@keyframes ciscoGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 10px #00bfff,
+      0 0 20px #00bfff,
+      0 0 40px rgba(0, 255, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow:
+      0 0 20px #00ffd5,
+      0 0 40px #00ffd5,
+      0 0 80px rgba(0, 255, 255, 0.9);
+  }
+}
+
+/* EC-Council – Red Glow */
+.cert-badges img.eccouncil {
+  animation: eccouncilGlow 2.5s infinite ease-in-out;
+}
+@keyframes eccouncilGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 10px #ff1e1e,
+      0 0 20px #ff1e1e,
+      0 0 40px rgba(255, 50, 50, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow:
+      0 0 20px #ff5c5c,
+      0 0 40px #ff5c5c,
+      0 0 80px rgba(255, 100, 100, 0.9);
+  }
+}
+</style>
+
+
+
+  <!-- EXPERIENCE SECTION WITH TIMELINE -->
   <section id="experience">
-    <h1 class="section-title">Experience</h1>
-    <div class="card">
-      <p>Security Research, Algorithmic Trading, and Web Engineering. 
-      <br>Currently focused on penetration testing, network defense, and AI-based system hardening.</p>
+    <h1 class="section-title">Work Experience</h1>
+
+    <div class="timeline">
+
+      <div class="timeline-item left latest">
+        <div class="logo"><img src="images/company1.png" alt="Company 1"></div>
+        <h3>CapitalK Technologies</h3>
+        <p>Founder & Managing Director</p>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="logo"><img src="images/company2.png" alt="Company 2"></div>
+        <h3>RND SOFTECH PRIVATE LIMITED</h3>
+        <p></p>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="logo"><img src="images/company3.png" alt="Company 3"></div>
+        <h3>Rapido</h3>
+        <p></p>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="logo"><img src="images/company4.png" alt="Company 4"></div>
+        <h3>KG Invicta Services Private Limited</h3>
+        <p>Sales Executive</p>
+      </div>
+
     </div>
   </section>
 
