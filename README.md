@@ -6,6 +6,6 @@ By day, I dive deep into engineering and security research, uncovering how techn
 
 Beyond tech and finance, I’m a sports enthusiast and traveler who thrives on challenge and adventure. Whether it’s testing my limits on the field or exploring new cultures and experiences, I believe growth comes from stepping beyond comfort zones.
 
-At the end of the day, everything I do - from research to trading to exploring — comes down to one core mission: to use my skills to build wealth, create freedom, and continuously learn. I’m a lifelong learner who’s always curious, always experimenting, and always evolving.
+At the end of the day, everything I do - from research to trading to exploring comes down to one core mission: to use my skills to build wealth, create freedom, and continuously learn. I’m a lifelong learner who’s always curious, always experimenting, and always evolving.
 
-Welcome to my world — where technology, finance, and adventure intersect.
+Welcome to my world - where technology, finance, and adventure intersect.
